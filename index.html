@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakhimpur ITI</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+.header{
+    background:#0b2c5f;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+/* ================= HEADER INFO ================= */
+
+.center-header{
+    text-align:center;
+}
+
+.header-info{
+    margin-top:5px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+    font-size:14px;
+}
+
+/* LINKS */
+.header-info a{
+    text-decoration:none;
+    color:#0b2c5f;
+    transition:0.3s;
+}
+
+/* HOVER EFFECT */
+.header-info a:hover{
+    color:#f4b400;
+}
+
+/* ================= LOGO HOVER ================= */
+
+.hover-logo{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* GLOW EFFECT */
+.hover-logo:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f,
+               0 0 30px #28a745;
+}
+
+/* REMOVE CIRCLE (IMPORTANT) */
+.logo{
+    border-radius:0 !important;
+}
+
+/* TIME */
+#time{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* LOGO SECTION */
+.top-section{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    flex-wrap:wrap;
+}
+
+.logo{
+    width:80px;
+}
+
+.center-title{
+    font-size:28px;
+    font-weight:bold;
+    color:#0b2c5f;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from { text-shadow:0 0 5px #f4b400;}
+    to { text-shadow:0 0 20px #f4b400;}
+}
+
+/* NAVBAR */
+nav{
+    background:#0b2c5f;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    padding:15px;
+    color:white;
+    cursor:pointer;
+}
+
+nav ul li:hover{
+    background:#f4b400;
+}
+
+/* MARQUEE */
+.marquee{
+    background:#f4b400;
+    padding:10px;
+    color:black;
+    font-weight:bold;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.marquee span{
+    display:inline-block;
+    padding-left:100%;
+    animation: scroll 10s linear infinite;
+}
+
+.marquee:hover span{
+    animation-play-state: paused;
+}
+
+@keyframes scroll{
+    from { transform: translateX(0);}
+    to { transform: translateX(-100%);}
+}
+
+/* MAIN LAYOUT */
+.container{
+    display:flex;
+    gap:10px;
+    padding:10px;
+    flex-wrap:wrap;
+}
+
+/* ================= NOTICE BOARD ================= */
+
+/* ================= NOTICE BOARD FIX ================= */
+
+.notice{
+    width:20%;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    border:2px solid #0b2c5f;
+    overflow:hidden;
+}
+
+/* FIXED HEADING */
+.notice-title{
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+/* SCROLL CONTAINER */
+.notice-container{
+    height:200px;
+    overflow:hidden;
+    position:relative;
+}
+
+/* SCROLL CONTENT */
+.notice-scroll{
+    display:flex;
+    flex-direction:column;
+    animation:scrollUp 20s linear infinite;
+}
+
+/* ITEMS */
+.notice-item{
+    padding:8px;
+    margin:5px 0;
+    background:#f5f5f5;
+    cursor:pointer;
+}
+.notice-scroll{
+    height:200px;
+    overflow:hidden;
+}
+
+
+
+.notice-item:hover{
+    background:#f4b400;
+}
+
+
+
+
+/* ANIMATION */
+@keyframes scrollUp{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-50%);}
+}
+
+/* GLOW */
+.notice:hover{
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f,
+               0 0 30px #28a745;
+}
+
+/* SCROLL AREA */
+
+
+/* PREVIEW BOX */
+#previewBox{
+    position:fixed;
+    right:20px;
+    top:150px;
+    width:250px;
+    height:200px;
+    background:white;
+    border:2px solid #0b2c5f;
+    display:none;
+    z-index:1000;
+}
+
+#previewBox img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ================= LOGIN BOX ================= */
+
+/* ================= LOGIN BOX GLOW ================= */
+
+.login{
+    width:20%;
+    background:white;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    border:2px solid #0b2c5f;
+    transition:0.3s;
+}
+
+/* GLOW EFFECT */
+.login:hover{
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f,
+               0 0 30px #28a745;
+}
+/* LOGIN TITLE CENTER */
+.login h3{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+/* INPUT FIELDS */
+.login input{
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+    border:2px solid #ccc;
+    outline:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+/* GLOW EFFECT (MULTI COLOR) */
+.login input:hover{
+    border-color:#f4b400;
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f,
+               0 0 30px #28a745;
+}
+
+/* BUTTON STYLE */
+.login button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    background:linear-gradient(45deg,#0b2c5f,#f4b400);
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* BUTTON HOVER GLOW */
+.login button:hover{
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f,
+               0 0 30px #28a745;
+    transform:scale(1.05);
+}
+
+/* ================= POPUP STYLE ================= */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-box{
+    background:white;
+    padding:20px;
+    text-align:center;
+    width:300px;
+    border-radius:10px;
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.5);}
+    to{transform:scale(1);}
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+/* ================= SLIDER STYLE ================= */
+
+.slider{
+    width:55%;
+    overflow:hidden;
+    border-top:5px solid #f4b400;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    transition:transform 0.5s ease-in-out;
+}
+
+.slides img{
+    width:100%;
+    height:250px;
+    flex-shrink:0;
+    object-fit:cover;
+}
+
+/* Controls */
+.controls{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.controls button{
+    padding:8px 10px;
+    margin:2px;
+    border:none;
+    background:#0b2c5f;
+    color:white;
+    cursor:pointer;
+}
+/* ================= COURSES ================= */
+
+.courses{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    padding:20px;
+}
+
+/* COURSE BOX */
+.course-box{
+    width:260px;
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+    border:2px solid #0b2c5f;
+}
+
+/* BOX HOVER */
+.course-box:hover{
+    transform:translateY(-10px);
+    background:#f4b400;
+    color:black;
+}
+
+/* IMAGE ALWAYS ANIMATED */
+/* ================= COURSE IMAGE UPDATE ================= */
+
+.course-box img{
+    width:100px;          /* chhoti size */
+    height:100px;
+    border-radius:50%;    /* circle */
+    object-fit:cover;
+    margin:10px auto;     /* center */
+    display:block;
+
+    /* animation same */
+    animation:zoom 3s infinite alternate;
+}
+.course-box img{
+    border:3px solid #0b2c5f;
+}
+
+.course-box:hover img{
+    box-shadow:0 0 10px #f4b400,
+               0 0 20px #0b2c5f;
+}
+
+/* IMAGE HOVER EFFECT */
+@keyframes zoom{
+    from{transform:scale(1);}
+    to{transform:scale(1.1);}
+}
+
+/* BUTTON */
+.course-box button{
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background:#0b2c5f;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* BUTTON HOVER */
+.course-box button:hover{
+    background:black;
+    color:#f4b400;
+}
+
+/* ================= VIDEO SECTION ================= */
+
+.videos{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    padding:20px;
+}
+
+/* VIDEO CARD */
+.video-card{
+    width:250px;
+    background:white;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+    border:2px solid #0b2c5f;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.video-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 10px #f4b400;
+}
+
+/* THUMB */
+.video-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+/* POPUP */
+#videoPopup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.video-box{
+    width:500px;
+    background:white;
+    padding:10px;
+    position:relative;
+}
+.video-box{
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.5);}
+    to{transform:scale(1);}
+}
+
+.video-box iframe{
+    width:100%;
+    height:300px;
+}
+
+.video-box span{
+    position:absolute;
+    right:10px;
+    top:5px;
+    cursor:pointer;
+    font-size:20px;
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#0b2c5f;
+    color:white;
+    padding:30px 20px;
+}
+
+/* CONTAINER */
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* BOX */
+.footer-box{
+    width:30%;
+}
+
+.footer-box h3{
+    margin-bottom:10px;
+    color:#f4b400;
+}
+
+/* LINKS */
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin:5px 0;
+}
+
+.footer-box ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+.footer-box ul li a:hover{
+    color:#f4b400;
+}
+
+/* BOTTOM */
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid #fff;
+    padding-top:10px;
+}
+
+.footer-bottom a{
+    color:#f4b400;
+    text-decoration:none;
+}
+
+.footer-bottom a:hover{
+    text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .footer-box{
+        width:100%;
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .notice, .login, .slider{
+        width:100%;
+    }
+}
+/* ===== FOOTER FULL WIDTH FIX ===== */
+.footer{
+    width:100%;
+    display:block;
+}
+
+body{
+    overflow-x:hidden;
+}
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:80px;
+    background:#25D366;
+    color:white;
+    font-size:25px;
+    padding:12px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 0 10px #000;
+    z-index:1000;
+    animation:float 2s infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+/* ===== SCROLL BUTTON ===== */
+#topBtn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:10px 15px;
+    font-size:18px;
+    border:none;
+    background:#0b2c5f;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    display:none;
+    z-index:1000;
+}
+
+#topBtn:hover{
+    background:#f4b400;
+}
+/* ===== PERFORMANCE ===== */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div id="time"></div>
+</div>
+
+<!-- ================= HEADER SECTION ================= -->
+<div class="top-section">
+
+    <!-- LEFT LOGO -->
+    <a href="index.html">
+        <img src="logo.jpeg" class="logo hover-logo">
+    </a>
+
+    <!-- CENTER TITLE + INFO -->
+    <div class="center-header">
+
+        <div class="center-title">Lakhimpur ITI</div>
+
+        <!-- CONTACT INFO -->
+        <div class="header-info">
+
+            <a href="mailto:info@lakhimpuriti.com">📧 info@lakhimpuriti.com</a>
+
+            <a href="tel:+919695699695">📞 +91 9695699695</a>
+
+            <a href="https://www.google.com/maps?q=Lakhimpur+Kheri+Uttar+Pradesh" target="_blank">
+                📍 Lakhimpur Kheri, UP
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT LOGO -->
+    <a href="index.html">
+        <img src="logo2.png" class="logo hover-logo">
+    </a>
+
+</div>
+
+<nav>
+<ul>
+<li>Home</li>
+<li>Courses</li>
+<li>Admission</li>
+<li>Contact</li>
+</ul>
+</nav>
+
+<div class="marquee">
+<span>Welcome to Lakhimpur ITI | Admission Open Now | Best Training Institute</span>
+</div>
+
+<div class="container">
+
+<!-- ================= NOTICE BOARD ================= -->
+<div class="notice">
+
+    <!-- FIXED HEADING -->
+    <h3 class="notice-title">Notice Board</h3>
+
+    <!-- SCROLL AREA -->
+    <div class="notice-container">
+        <div class="notice-scroll">
+
+            <div class="notice-item" data-img="preview1.jpg">📄 Admission Notice</div>
+            <div class="notice-item" data-img="preview2.jpg">📄 Exam Schedule</div>
+            <div class="notice-item" data-img="preview3.jpg">📄 Holiday List</div>
+            <div class="notice-item" data-img="preview4.jpg">📄 New Batch Info</div>
+            <div class="notice-item" data-img="preview5.jpg">📄 Fee Structure</div>
+            <div class="notice-item" data-img="preview6.jpg">📄 Result Update</div>
+            <div class="notice-item" data-img="preview7.jpg">📄 Practical Dates</div>
+            <div class="notice-item" data-img="preview8.jpg">📄 Workshop Timing</div>
+            <div class="notice-item" data-img="preview9.jpg">📄 Scholarship Info</div>
+            <div class="notice-item" data-img="preview10.jpg">📄 Important Notice</div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- PREVIEW BOX -->
+<div id="previewBox">
+    <img id="previewImg">
+</div>
+<!-- ================= SLIDER SECTION START ================= -->
+<div class="slider">
+
+    <!-- Slider Track -->
+    <div class="slides" id="slides">
+
+        <!-- Images (10 add karo) -->
+        <img src="slide/slide1.jpeg">
+        <img src="slide/slide2.jpeg">
+        <img src="slide/slide3.jpeg">
+        <img src="slide/slide4.jpeg">
+        <img src="slide/slide5.jpeg">
+        <img src="slide/slide6.jpeg">
+        <img src="slide/slide7.jpeg">
+        <img src="slide/slide8.jpg">
+        <img src="slide/slide9.jpg">
+        <img src="slide/slide10.png">
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="prevSlide()">⏮</button>
+        <button onclick="togglePlay()" id="playBtn">⏸</button>
+        <button onclick="nextSlide()">⏭</button>
+    </div>
+
+</div>
+<!-- ================= SLIDER SECTION END ================= -->
+
+<!-- ================= LOGIN BOX ================= -->
+<div class="login">
+<h3>Login</h3>
+
+<input type="text" id="username" placeholder="User ID">
+<input type="password" id="password" placeholder="Password">
+
+<button id="loginBtn" onclick="fakeLogin()">Login</button>
+</div>
+
+<!-- ================= ERROR POPUP ================= -->
+<div id="errorPopup" class="popup">
+
+    <div class="popup-box">
+        <span class="close" onclick="closePopup()">❌</span>
+        <h2>🚫 Access Denied</h2>
+        <p>You are not authorized to enter here</p>
+    </div>
+
+</div>
+
+<!-- Error Sound -->
+<audio id="errorSound">
+    <source src="error.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================= COURSES SECTION ================= -->
+<div class="courses">
+
+<!-- ===== COURSE 1 ===== -->
+<div class="course-box">
+    <img src="/course/image.png">
+
+    <h3>🎓 BA LLB (Integrated)</h3>
+
+    <p><b>क्या है:</b> 12th के बाद law + arts combined course</p>
+
+    <p><b>Subjects:</b> Political Science, Sociology, Criminal Law</p>
+
+    <p><b>Duration:</b> 5 साल</p>
+
+    <p><b>Fees:</b> ₹10,000 – ₹2,50,000/year</p>
+
+    <button onclick="sendWhatsApp('BA LLB', '₹10,000 – ₹2,50,000/year')">
+        Book Seat Now
+    </button>
+</div>
+
+<!-- ===== COURSE 2 ===== -->
+<div class="course-box">
+    <img src="/course/image.png">
+
+    <h3>⚖️ BBA LLB</h3>
+
+    <p><b>क्या है:</b> Law + Business Administration</p>
+
+    <p><b>Subjects:</b> Corporate Law, Management, Taxation</p>
+
+    <p><b>Duration:</b> 5 साल</p>
+
+    <p><b>Fees:</b> ₹20,000 – ₹3,00,000/year</p>
+
+    <button onclick="sendWhatsApp('BBA LLB', '₹20,000 – ₹3,00,000/year')">
+        Book Seat Now
+    </button>
+</div>
+
+<!-- ===== COURSE 3 ===== -->
+<div class="course-box">
+    <img src="course/image.png">
+
+    <h3>📜 LLB (3 Year)</h3>
+
+    <p><b>क्या है:</b> Graduation के बाद law course</p>
+
+    <p><b>Subjects:</b> Civil Law, Criminal Law, Contract Law</p>
+
+    <p><b>Duration:</b> 3 साल</p>
+
+    <p><b>Fees:</b> ₹10,000 – ₹1,50,000/year</p>
+
+    <button onclick="sendWhatsApp('LLB', '₹10,000 – ₹1,50,000/year')">
+        Book Seat Now
+    </button>
+</div>
+
+<!-- ===== COURSE 4 ===== -->
+<div class="course-box">
+    <img src="/course/image.png">
+
+    <h3>🎓 LLM</h3>
+
+    <p><b>क्या है:</b> LLB के बाद specialization</p>
+
+    <p><b>Specialization:</b> Cyber Law, Corporate Law</p>
+
+    <p><b>Duration:</b> 1–2 साल</p>
+
+    <p><b>Fees:</b> ₹20,000 – ₹2,00,000/year</p>
+
+    <button onclick="sendWhatsApp('LLM', '₹20,000 – ₹2,00,000/year')">
+        Book Seat Now
+    </button>
+</div>
+
+<!-- ===== COURSE 5 ===== -->
+<div class="course-box">
+    <img src="/course/image.png">
+
+    <h3>💻 Diploma (Law)</h3>
+
+    <p><b>क्या है:</b> Short-term law courses</p>
+
+    <p><b>Types:</b> Cyber Law, Labour Law, Taxation</p>
+
+    <p><b>Duration:</b> 6 महीने – 1 साल</p>
+
+    <p><b>Fees:</b> ₹5,000 – ₹50,000</p>
+
+    <button onclick="sendWhatsApp('Diploma Law', '₹5,000 – ₹50,000')">
+        Book Seat Now
+    </button>
+</div>
+
+</div>
+
+
+<!-- ================= YOUTUBE VIDEO SECTION ================= -->
+
+<div class="videos">
+
+    <!-- ===== VIDEO CARD ===== -->
+    <div class="video-card" data-video="https://www.youtube.com/watch?v=5oh2Eeb002k">
+        <img src="video/video.png">
+        <p>Law College Experience 1</p>
+    </div>
+
+    <div class="video-card" data-video="https://www.youtube.com/embed/3JZ_D3ELwOQ">
+        <img src="video/64556064.png">
+        <p>Law Student Life</p>
+    </div>
+
+    <div class="video-card" data-video="https://www.youtube.com/embed/ysz5S6PUM-U">
+        <img src="video/image.png">
+        <p>First Day in Law College</p>
+    </div>
+
+    <div class="video-card" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+        <img src="video/lib.png">
+        <p>Law Study Routine</p>
+    </div>
+
+    <div class="video-card" data-video="https://www.youtube.com/embed/oUFJJNQGwhk">
+        <img src="video/hostel.png">
+        <p>Hostel Life Law College</p>
+    </div>
+
+    <div class="video-card" data-video="https://www.youtube.com/embed/L_jWHffIx5E">
+        <img src="video/experince.png">
+        <p>Reality of Law Students</p>
+    </div>
+
+</div>
+
+<!-- ===== POPUP VIDEO ===== -->
+<div id="videoPopup">
+    <div class="video-box">
+        <span onclick="closeVideo()">❌</span>
+        <iframe id="popupVideo" src="" allow="autoplay" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h3>Lakhimpur ITI</h3>
+            <p>Providing quality technical education and skill development.</p>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <p>📍 Address: Lakhimpur Kheri, Uttar Pradesh</p>
+            <p>📧 Email: info@lakhimpuriti.com</p>
+            <p>📞 Phone: +91 9695699695</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- ================= FLOATING WHATSAPP ================= -->
+<a href="https://wa.me/919695699695" target="_blank" class="whatsapp-float">
+    💬
+</a>
+<!-- ================= SCROLL TOP BUTTON ================= -->
+<button onclick="scrollTopBtn()" id="topBtn">⬆</button>
+    
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>© All Rights Reserved Lakhimpur ITI</p>
+
+        <p>
+            <a href="#" onclick="sendFooterWhatsApp()">
+                Developed by Aanchal Computerz
+            </a>
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+// TIME INDIA
+function updateTime(){
+    let now = new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata"});
+    document.getElementById("time").innerHTML = now;
+}
+setInterval(updateTime,1000);
+
+// SLIDER
+<!-- ================= SLIDER SCRIPT ================= -->
+
+
+let index = 0;
+let slides = document.getElementById("slides");
+let totalSlides = slides.children.length;
+let autoPlay = true;
+
+/* ===== SHOW SLIDE ===== */
+function showSlide(){
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+/* ===== NEXT ===== */
+function nextSlide(){
+    index = (index + 1) % totalSlides;
+    showSlide();
+}
+
+/* ===== PREVIOUS ===== */
+function prevSlide(){
+    index = (index - 1 + totalSlides) % totalSlides;
+    showSlide();
+}
+
+/* ===== AUTO PLAY ===== */
+let interval = setInterval(()=>{
+    if(autoPlay){
+        nextSlide();
+    }
+},2000);
+
+/* ===== PLAY / PAUSE ===== */
+function togglePlay(){
+    autoPlay = !autoPlay;
+    document.getElementById("playBtn").innerText = autoPlay ? "⏸" : "▶";
+}
+
+/* ===== MOBILE SWIPE ===== */
+let startX = 0;
+
+slides.addEventListener("touchstart", e=>{
+    startX = e.touches[0].clientX;
+});
+
+slides.addEventListener("touchend", e=>{
+    let endX = e.changedTouches[0].clientX;
+    if(startX > endX){
+        nextSlide();
+    }else{
+        prevSlide();
+    }
+});
+
+
+/* ================= SLIDER SCRIPT END ================= */
+
+/* ================= LOGIN SCRIPT ================= */
+
+
+function fakeLogin(){
+
+    // Popup show
+    document.getElementById("errorPopup").style.display="flex";
+
+    // Sound play
+    let sound = document.getElementById("errorSound");
+    sound.play();
+
+    // 5 sec reload
+    setTimeout(()=>{
+        location.reload();
+    },5000);
+}
+
+// Close popup manually
+function closePopup(){
+    document.getElementById("errorPopup").style.display="none";
+}
+// ================= Button hover text =================
+
+
+let btn = document.getElementById("loginBtn");
+
+/* HOVER START */
+btn.addEventListener("mouseenter", ()=>{
+    btn.innerText = "Verifying Credentials";
+});
+
+/* HOVER END */
+btn.addEventListener("mouseleave", ()=>{
+    btn.innerText = "Login";
+});
+
+// ================= NOTICE PREVIEW =================
+
+
+let items = document.querySelectorAll(".notice-item");
+let previewBox = document.getElementById("previewBox");
+let previewImg = document.getElementById("previewImg");
+
+items.forEach(item=>{
+
+    item.addEventListener("mouseenter", ()=>{
+        previewBox.style.display="block";
+        previewImg.src = item.getAttribute("data-img");
+    });
+
+    item.addEventListener("mouseleave", ()=>{
+        previewBox.style.display="none";
+    });
+
+});
+
+// ================= Whatsapp section =================
+
+
+function sendWhatsApp(course, fees){
+    let msg = `Hello, I want to book seat for ${course}. Fees: ${fees}`;
+    let url = `https://wa.me/919695699695?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
+}
+
+// ================= video script =================
+
+
+
+
+let cards = document.querySelectorAll(".video-card");
+let popup = document.getElementById("videoPopup");
+let iframe = document.getElementById("popupVideo");
+
+/* CLICK TO OPEN VIDEO */
+cards.forEach(card => {
+
+    card.addEventListener("click", ()=>{
+        let video = card.getAttribute("data-video");
+        iframe.src = video + "?autoplay=1";
+        popup.style.display="flex";
+    });
+
+});
+
+/* CLOSE VIDEO */
+function closeVideo(){
+    popup.style.display="none";
+    iframe.src="";
+}
+
+// ================= Footer Whatsapp section =================
+
+
+function sendFooterWhatsApp(){
+    let msg = "Mujhe website develop karani hai";
+    let url = "https://wa.me/919214143231?text=" + encodeURIComponent(msg);
+    window.open(url, "_blank");
+}
+/* ===== SCROLL BUTTON JS ===== */
+
+let topBtn = document.getElementById("topBtn");
+
+window.onscroll = function(){
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+        topBtn.style.display = "block";
+    }else{
+        topBtn.style.display = "none";
+    }
+};
+
+function scrollTopBtn(){
+    window.scrollTo({top:0, behavior:'smooth'});
+}
+
+
+
+</script>
+
+</body>
+</html>
